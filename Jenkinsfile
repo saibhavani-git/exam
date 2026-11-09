@@ -10,7 +10,7 @@ pipeline{
         stage('Run'){
             steps{
                 echo 'Running Docker container...'
-                bat 'docker rm -f registration-app || exit 0'
+                bat 'docker rm -f registration-container || exit 0'
                 bat 'docker run -d -p 5000:5000 --name registration-container registration-app'
 
             }
